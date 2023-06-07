@@ -699,15 +699,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                      <?php if($this->session->userdata('student_username')){ 
                         ?>
                         <ul id="nav" >
-                          <li><a style="font-size: 20px;color:black" href="<?php echo base_url('student_profile')?>" target="_blank">Update Profile</a></li><br>
+                          <li style=""><a style="font-size: 20px;color:black" href="<?php echo base_url('student_profile')?>"><b>Update Profile</b></a></li><br>
                              
-                          <li><a style="font-size: 20px;color:black" href="<?php echo base_url('reset-password')?>" target="_blank">Reset Password</a></li><br>
+                          <li style=""><a style="font-size: 20px;color:black" href="<?php echo base_url('reset-password')?>"><b>Reset Password</b></a></li><br>
                            
                       <li style=""><a style="font-size: 20px;color:black" href="https://www.amazon.in/b?_encoding=UTF8&tag=137909-21&linkCode=ur2&linkId=6e7e6bd9f310585ddf008ed6b3f291e2&camp=3638&creative=24630&node=4149751031" target="_blank"><b>Books</b></a></li><br>
                      
                       <li style=""><a style="font-size: 20px;color:black" href="https://mocktest.theglobalscholarship.org/" target="_blank"><b>MockTest</b></a></li><br>
 
-                      <li><a style="font-size: 20px;color:black" href="<?php echo base_url();?>logout" target="_blank">Logout</a></li><br>
+                      <li style=""><a style="font-size: 20px;color:black" href="<?php echo base_url();?>logout"><b>Logout</b></a></li><br>
                   </ul>  
                      <?php }else{?>     
                         <ul id="nav" >
