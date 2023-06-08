@@ -1,0 +1,62 @@
+In application/config/routes.php
+-----------------------------------
+
+$route['sitemap'] = $route['default_controller'].'/sitemapview';
+
+
+---------------------------------------------
+In application/controller/new_controller.php
+---------------------------------------------
+
+
+ /* ------------------for sitemap---------on 08 June------by varun----------*/
+    public function sitemapview(){
+        $data['others']=$this->New_model->serachOtherScholarshipforsitemap();
+       $data['Abroad']=$this->New_model->searchAbroadscholarshipforsitemap();
+        $data['scholarships']=$this->New_model->searchscholarshipforsitemap();
+        //$data['scholarships']=$this->New_model->getallforsitemap();
+        $data['expired']=$this->New_model->expired();
+        $this->load->view('sitemap',$data);   
+    }
+     /* ------------------for sitemap---------on 08 June------by varun----------*/
+
+
+------------------------------------
+In application/model/new_model.php
+------------------------------------
+
+ /* ------------------for sitemap---------on 08 June------by varun----------*/
+  public function getallforsitemap(){
+   $query=$this->db->where('application_end_date >=', date('Y-m-d'))
+                   ->order_by('scholarship_added_date','DESC')
+                   ->get('scholarships')->result();
+      return $query;     
+  }
+
+
+  public function searchAbroadscholarshipforsitemap(){
+  
+ $query=$this->db->where('scholarship_type','Abroad')->where('application_end_date >=', date('Y-m-d'))->Where('web_status',1)->order_by('scholarship_added_date','DESC')->get('scholarships')->result();
+      return $query;     
+  }
+  public function searchscholarshipforsitemap(){
+  
+ $query=$this->db->where('scholarship_type','Scholarship')->where('application_end_date >=', date('Y-m-d'))->Where('web_status',1)->order_by('scholarship_added_date','DESC')->get('scholarships')->result();
+      return $query;     
+  }
+  public function serachOtherScholarshipforsitemap(){
+  
+   // print_r($string);exit;
+    $query=$this->db->where('scholarship_type !=','Scholarship')->where('scholarship_type !=','Abroad')->where('application_end_date >=', date('Y-m-d'))->Where('web_status',1)->limit(12)->get('scholarships')->result();
+    return $query;     
+  }
+   /* ------------------for sitemap---------on 08 June------by varun----------*/
+
+--------------------
+In application/view
+--------------------
+
+file  sitemap.php
+
+
+
