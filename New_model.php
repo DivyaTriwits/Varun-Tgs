@@ -47,6 +47,26 @@ class New_model extends CI_Model
     $query=$this->db->where('scholarship_type !=','Scholarship')->where('scholarship_type !=','Abroad')->where('application_end_date >=', date('Y-m-d'))->Where('web_status',1)->limit(12)->get('scholarships')->result();
     return $query;     
   }
+  /* ------------------10 June------by varun----------*/
+  public function foronefeedbackaday($studentEmail)
+  {
+    $string = $studentEmail;
+  
+   // print_r($string);exit;
+
+    $query=$this->db->where('student_email',$string)->where('feedback_date >= ', date('Y-m-d H:i:s'))->Where('web_status',0)->get('feed_back');
+       
+     if($query->num_rows() > 0){
+        echo '<script> alert("Only one feedback is allowed for a day")</script>';
+    return TRUE;     
+  }
+    else 
+    {
+    return FALSE;
+    }
+  }
+    /* ------------------10 June------by varun----------*/
+  
    /* ------------------for sitemap---------on 08 June------by varun----------*/
 
   public function filtersearchEducationBased($id,$limit,$start){

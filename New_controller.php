@@ -35,10 +35,12 @@ class New_controller extends CI_Controller
     public function pageInformation($id,$name)
     {
          $this->load->view('new/new_header');
+       $this->load->view('new/whatspopup');     //for whatsapp pop up icon
         $data['details']=$this->New_model->getScholarshipDetails($id);
         $data['attachment']=$this->New_model->getScholarshipAttachment($id);
         //print_r($data);exit();
         $data['some']=$this->New_model->someOtherScholarship($data['details']->scholarship_type);
+        $this->load->view('new/whatspopup',$data);
         $this->load->view('new/new_scholarship_details',$data);
          $this->load->view('new/footer');
     }
@@ -170,24 +172,30 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
     $email = $this->input->post('email');
     $chk = $this->Auth->forget_password();
- //   echo "<script>alert('Confirmation IS: ".$chk."');</script>"; // 2 june
+    //echo "<script>alert('Confirmation IS: ".$chk."');</script>"; // 2 june //ON 16-6-23 BY VARUN 
  //echo 'Hello';
     if ($chk != false) {
+      /*---------------- temporary commented ----------*/
         $this->load->library('phpmailer_lib');
         $this->phpmailer_lib->mail->addAddress($email);
         $this->phpmailer_lib->mail->Subject = 'Reset Password Link';
         $this->phpmailer_lib->mail->Body = 'Your Confirmation for Reset Password: ' . $chk . '    click the link';
  
         if ($this->phpmailer_lib->mail->send()) {
-            $data['chk'] = $chk;
-          //  echo '<script> alert("Mail has been sent kindly check")</script>';
+           $data['chk'] = $chk;
+           //echo '<script> alert("Mail has been sent kindly check")</script>';
             $this->load->view('new/new_header');
-            $this->load->view('new/forgot_password_confirm',$data);
+           // $this->load->view('new/forgot_password');
+          $this->load->view('new/forgot_password_confirm',$data);
             $this->load->view('new/footer');
         } else {
-            echo '<script> alert("Unable to send the email try after sometime")</script>';
+         //   echo '<script> alert("Unable to send the email try after sometime")</script>';
+     /* ---------------- temporary commented ----------*/
+      
+      $data['chk'] = $chk;
             $this->load->view('new/new_header');
-            $this->load->view('new/forgot_password_confirm',$data);
+          //  $this->load->view('new/forgot_password');
+          $this->load->view('new/forgot_password_confirm',$data);
             $this->load->view('new/footer');
         }
     } else { 
@@ -347,7 +355,9 @@ error_reporting(E_ALL);
     public function confirmforgotPassword($otp, $id)
     {
      // print_r('hi');exit;
+      //echo "<script>alert('Confirmation Failed1. Try varun.');</script>";    CHANGES MADE BY DIVYA ON 16-JUN-23 WITH THE HELP OF VARUN
         $this->Auth->confirm_password($otp, $id);
+      
     }
     public function reset()
     {
