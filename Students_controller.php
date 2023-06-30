@@ -229,10 +229,12 @@ public function addStudentRegistrationDetails(){
     $this->email->initialize($config);
     $sub = 'The Global Scholarship';
     $this->email->from('no-reply@theglobalscholarship.org');
-    $this->email->to($this->input->post('email'));
-    $this->email->subject($sub);
+  $this->email->to($this->input->post('email'));
+  $this->email->subject($sub);
     $this->email->message($message);
-    $this->email->send();
+   $this->email->send();
+    
+
     if($this->input->post('ad_scholarship_id')!=''){
        redirect('scholarships-details/'.$this->input->post('ad_scholarship_id')) ;
     }else{
@@ -547,7 +549,8 @@ public function studentHome()
         $this->load->view('new/footer');
 }
 
-// public function redirectToUpdateProfileFirstTime(){
+// public function redirectToUpdateProfileFirstTime()
+// {
 //     $this->db->set('has_visited')
 // }
 public function accountSettings()
@@ -726,6 +729,9 @@ public function updatePersonalDetails()
 {
 
 	if (!$this->session->userdata('student_username')) redirect('student-login');
+  
+ //  echo '<script> alert("Test by VaRUN")</script>';
+
 	$this->Student_model->update_personal_details();
 
 }
@@ -932,12 +938,22 @@ $this->load->view('student/footer');
 }
 public function feedBack()
 {
+  if (!$this->session->userdata('student_username'))
+  {
+  	  	$this->load->view('new/new_header');
+		$this->load->view('student/feedbackbefore');
+		$this->load->view('new/footer');
+  }
+  
+  else 
+  {
 	//print_r('heelo');exit;
 	$this->load->view('student/header');
 	$student['feedback']=$this->Student_model->get_latest_feed_back();
 	$student['getProfilePhoto']=$this->Student_model->get_profile_photo();
 	$this->load->view('student/feed_back',$student);
 	$this->load->view('student/footer');
+  }
 
 }
 
@@ -946,7 +962,9 @@ public function storeStudentFeedback()
 {
 
 	if (!$this->session->userdata('student_username')) redirect('student-login');
-
+else {
+  
+  
 	$studentEmail=$this->session->userdata('registered_email');
 	$studentId=$this->session->userdata('student_username');
 	$mobileNumber="";
@@ -961,9 +979,12 @@ public function storeStudentFeedback()
 		$studentName=$studentDetails->student_name; 
 	}
 
-
-	
-
+	if ($this->hasSubmittedToday()) {
+       //     echo '<script> alert("Only one feedback is allowed for a day")</script>';
+            echo "<script>alert('Only one feedback is allowed for a day');</script>";
+            redirect("student-home");
+        } else {
+        
 	
 	$file_upload_name= array(
 
@@ -976,11 +997,55 @@ public function storeStudentFeedback()
 	);
 
 
-
+       // Set a session variable to track the submission
+            $this->session->set_userdata('lastSubmission', date('Y-m-d'));
+//echo '<script> alert("Thank you for your feedback")</script>';
 	$this->db->trans_start();
 	$this->db->insert('feed_back',$file_upload_name);
 	$this->db->trans_complete();
 
+      echo "<script>alert('Thank you for your Feed back');</script>";
+    if ($this->db->trans_status() === TRUE)
+	{
+		$this->session->set_flashdata('add-success','Feed back added successfully');
+		redirect("student-home");
+	}
+	else
+	{
+		$this->session->set_flashdata('add-failure','failed to add feed back');
+		redirect("student-home");
+	}
+ }
+
+   /* ------------------10 June------by varun----------
+  $data=$this->New_model->foronefeedbackaday($studentEmail);
+  echo '<script> alert("Only one feedback is allowed for a day")</script>';
+	if ($data != 'FALSE') 
+    	{
+			echo '<script> alert("Only one feedback is allowed for a day")</script>';
+			redirect("feed-back");
+		}
+  else
+  		{
+			$this->db->trans_start();
+			$this->db->insert('feed_back',$file_upload_name);
+			$this->db->trans_complete();
+    
+    if ($this->db->trans_status() === TRUE)
+	{
+		$this->session->set_flashdata('add-success','Feed back added successfully');
+		redirect("feed-back");
+
+
+	}
+	else
+	{
+		$this->session->set_flashdata('add-failure','failed to add feed back');
+		redirect("feed-back");
+	}
+		}
+
+   /* ------------------10 June------by varun----------
 	if ($this->db->trans_status() === TRUE)
 	{
 		$this->session->set_flashdata('add-success','Feed back added successfully');
@@ -993,8 +1058,19 @@ public function storeStudentFeedback()
 		$this->session->set_flashdata('add-failure','failed to add feed back');
 		redirect("feed-back");
 	}
-
+    */
 }
+}
+  
+  
+  private function hasSubmittedToday()
+    {
+        $lastSubmission = $this->session->userdata('lastSubmission');
+        $today = date('Y-m-d');
+
+        return ($lastSubmission === $today);
+    }
+
 
 public function getCitiesList()
 {
