@@ -338,6 +338,24 @@ h5{
 					</div>
 				</div>
 			</div>
+          
+          <!--    ---------------telegram link  28/06/2023 by varun-----------------------    -->
+          <center>
+            <div class="container" id="telebutton">
+              <div class="col-lg-6 col-xl-12 col-md-12 col-12 col-sm-12" style="margin-bottom:10px;">
+                <a href="https://t.me/theglobalscholarship">
+                  <button style="background-color:#2AABEE;color:#fff;border-radius:12px;padding:10px 10px 10px 10px">
+                    <i class="fa fa-telegram" style="font-size:32px;padding:2px 6px 2px 6px"></i>
+                    <span style="font-size:18px;margin:10px !important ">Join Telegram Channel</span>
+                  </button>
+                </a>
+              </div>
+          </div>
+              </center>
+            <!--    ---------------telegram link  28/06/2023 by varun-----------------------    -->
+
+          
+          
 <!--  For hiding the Importanf dates in the expired scholar imfprmation page 03 June  By Varun -->
            <?php if( $t < date('Y-m-d')){?>
            	<div class="col-lg-12 col-xl-6 col-md-12 col-12 col-sm-12">
@@ -522,6 +540,7 @@ h5{
       
  <!-- Display the Youtube video on Product page by Varun 14 June -->        
    <center>
+     <div class="watchLink"><Strong>Watch Complete Application Process </Strong></div>
 	<div style="border: 3px solid white;  width: 360px; height: 205px; border-radius: 15px; ">
 	<?php
 // Original string
@@ -534,8 +553,11 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
 
 ?>
 	
+      
 	<?php if($details->vedio_link==NULL){?>
-		<iframe style="border-radius: 15px;" width="350" height="200" src="https://www.youtube.com/embed/PzgSgXqurvo" frameborder="0" allowfullscreen></iframe>
+		<iframe style="border-radius: 15px;" width="350" height="200" src="https://www.youtube.com/embed/PzgSgXqurvo?autoplay=1" frameborder="0"  allow="autoplay" allowfullscreen=""
+        sandbox="allow-forms allow-same-origin allow-scripts">
+      </iframe>
       <?php }else{?>
       <iframe style="border-radius: 15px;" width="350" height="200" src="<?php echo $modifiedString ?>" frameborder="0" allowfullscreen></iframe>
       <?php }?>
@@ -546,7 +568,14 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
 <!-- Display the Youtube video on Product page by Varun 14 June -->   
       
  <br><br>
-<div class="container" id="telebutton"><div class="col-lg-6 col-xl-12 col-md-12 col-12 col-sm-12" style="margin-bottom:10px;"><a href="https://t.me/theglobalscholarship"><button style="background-color:#2AABEE;color:#fff;border-radius:12px;padding:10px 10px 10px 10px"><i class="fa fa-telegram" style="font-size:32px;padding:2px 8px 2px 10px"></i><span style="font-size:20px;margin:15px !important ">Join Telegram Channel</span></button></a></div></div>
+<!--<div class="container" id="telebutton">
+<div class="col-lg-6 col-xl-12 col-md-12 col-12 col-sm-12" style="margin-bottom:10px;">
+<a href="https://t.me/theglobalscholarship"><button style="background-color:#2AABEE;color:#fff;border-radius:12px;padding:10px 10px 10px 10px">
+<i class="fa fa-telegram" style="font-size:32px;padding:2px 8px 2px 10px"></i><span style="font-size:20px;margin:15px !important ">Join Telegram Channel
+</span>
+</button>
+</a></div>
+</div> -->  
 <div class="Addbox text-center" style="height: 150px; margin: 10px 0px;">
 
 <ins class="adsbygoogle"
@@ -570,8 +599,50 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
 					<div class="card-body">	
 						<ul class="unorderd description" >
 							
-							<li ><?php echo $details->scholarship_description;?></li>
-							
+						<!--03-7-23 by divya(varun)	<li ><?php echo $details->scholarship_description;?></li>-->
+						<div class="content-toggle" style="color: black;">
+    <?php echo $scholarshipDescription; ?>
+</div>
+
+<!-- Include the CSS and JavaScript code for the toggle functionality -->
+<style>
+    .toggle-btn {
+        cursor: pointer;
+    }
+    .toggle-content {
+        display: none;
+
+    }
+
+    .toggle-content {
+        display: none;
+        margin-left: 20px;
+        color: black; /* Set the text color to black */
+    }
+
+</style>
+
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    var toggleButtons = document.getElementsByClassName('toggle-btn');
+
+    for (var i = 0; i < toggleButtons.length; i++) {
+        toggleButtons[i].addEventListener('click', function() {
+            var content = this.nextElementSibling;
+            var icon = this.innerHTML.trim();
+
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                this.innerHTML = icon.replace('+', '-');
+            } else {
+                content.style.display = 'none';
+                this.innerHTML = icon.replace('-', '+');
+            }
+        });
+    }
+});
+</script>
+	
 							</ul>			
 					</div>
 				</div>
@@ -727,17 +798,17 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
 	Login & Apply
 	</a>
 	  <?php }?>
-      <?php if($details->vedio_link==NULL){?>
+     <!-- <?php if($details->vedio_link==NULL){?>
 		<div class="watchLink"><Strong>Watch Complete process </Strong><a class="youtubelink" target="_blank" href="https://www.youtube.com/channel/UC_kmviAHHhyZYESlhRPoKuw" style="color: blue;text-decoration: underline;">here.!</a>
 		</div>
       <?php }else{?>
       <div class="watchLink"><Strong>Watch Complete process </Strong><a class="youtubelink" target="_blank" href="<?php echo $details->vedio_link?>" style="color: blue;text-decoration: underline;">here.!</a>
 		</div>
-      <?php }?>
-		<div style="padding-left:10px" >
+      <?php }?> -->
+		<!--<div style="padding-left:10px" >
 		    <?php $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>
 		   <a target="_blank" href="whatsapp://send?text= <?php echo $details->scholarship_name;?> Scholarship , See More: <?php echo $actual_link;  ?>" data-action="share/whatsapp/share"  class="link-whatsapp"><button style="background-color:green;padding:4px;color:#fff;border-radius:10px"><i class="fa fa-whatsapp" aria-hidden="true" style="padding-right:6px"></i>Share via WhatsApp</button></a>
-		</div>
+		</div>-->
 
 		<!--<div style="padding-left:10px" id="deskButton">-->
 		<!--    <?php $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>-->
