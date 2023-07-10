@@ -638,6 +638,18 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
         });
     }
 });
+   function toggleContent(element) {
+    var content = element.nextElementSibling;
+    var icon = element.querySelector('.toggle-icon');
+
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        icon.innerHTML = '-';
+    } else {
+        content.style.display = 'none';
+        icon.innerHTML = '+';
+    }
+}
 </script>
     
                             </ul>           
@@ -658,16 +670,16 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
         </div>
         <?php if($details->documents != ''){?>
             <div class="col-lg-12 col-xl-12 col-md-12 col-12 col-sm-12">
-                <div class="" style="margin-bottom:10px;margin-left: -25px !important">
+                <div class="" style="margin-bottom:0px;margin-left: -25px !important">
                     <div class="card-header border-bottom-0 ">
-                       <h5 class="main-content-label tx-dark tx-medium mb-0 font" onclick="toggleDescription('description2')">
+                       <h6 class="main-content-label tx-dark tx-medium mb-0 font" onclick="toggleDescription('description2')" style="cursor: pointer;background-color:white;border-radius: 25px; border: 5px solid #ff8c00; padding: 10px;">
   Attachments
   <span id="description2-toggleIcon" class="toggle-icon plus"></span>
-</h5>
+</h6>
 </div>
-<div class="toggle-description" id="description2" style="display: none;">
+<div class="toggle-description" id="description2" style="display: none; margin: 10px 0; padding: 10px;">
   <div class="card-body">
-    <ul class="unorderd">
+    <ul class="unorderd" >
       <?php echo $details->documents ?>
     </ul>
   </div>
@@ -676,13 +688,13 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
             </div>  
             <?php }?>
             <div class="col-lg-12 col-xl-12 col-md-12 col-12 col-sm-12">
-                <div class="" style="margin-bottom:10px;margin-left: -25px !important">
+                <div class="" style="margin-bottom:0px;margin-left: -25px !important">
                     <div class="card-header border-bottom-0 ">
-                        <h5 class="main-content-label tx-dark tx-medium mb-0 font" onclick="toggleDescription('description1')"> How To Apply
+                        <h6 class="main-content-label tx-dark tx-medium mb-0 font" onclick="toggleDescription('description1')" style="cursor: pointer;background-color:white;border-radius: 25px; border: 5px solid #ff8c00; padding: 10px;"> How To Apply
                         <span id="description1-toggleIcon" class="toggle-icon plus"></span>
-                        </h5>
+                        </h6>
                     </div>
-                    <div class="toggle-description" id="description1" style="display: none;">
+                    <div class="toggle-description" id="description1" style="display: none; margin: 10px 0; padding: 10px;">
                     <div class="card-body"> 
                     <?php if($details->how_apply != ''){?>
                     <!--<li><?php echo $details->how_apply;?></li>-->
