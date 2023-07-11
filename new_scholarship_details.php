@@ -555,7 +555,7 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
     
       
     <?php if($details->vedio_link==NULL){?>
-        <iframe style="border-radius: 15px;" width="350" height="200" src="https://www.youtube.com/embed/PzgSgXqurvo?autoplay=1" frameborder="0"  allow="autoplay" allowfullscreen=""
+        <iframe style="border-radius: 15px;" width="350" height="200" src="https://www.youtube.com/embed/PzgSgXqurvo?autoplay=1" frameborder="0"  allow="autoplay" allowfullscreen="1"
         sandbox="allow-forms allow-same-origin allow-scripts">
       </iframe>
       <?php }else{?>
@@ -638,20 +638,9 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
         });
     }
 });
-   function toggleContent(element) {
-    var content = element.nextElementSibling;
-    var icon = element.querySelector('.toggle-icon');
-
-    if (content.style.display === 'none') {
-        content.style.display = 'block';
-        icon.innerHTML = '-';
-    } else {
-        content.style.display = 'none';
-        icon.innerHTML = '+';
-    }
-}
 </script>
-    
+
+
                             </ul>           
                     </div>
                 </div>
@@ -672,12 +661,12 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
             <div class="col-lg-12 col-xl-12 col-md-12 col-12 col-sm-12">
                 <div class="" style="margin-bottom:0px;margin-left: -25px !important">
                     <div class="card-header border-bottom-0 ">
-                       <h6 class="main-content-label tx-dark tx-medium mb-0 font" onclick="toggleDescription('description2')" style="cursor: pointer;background-color:white;border-radius: 25px; border: 5px solid #ff8c00; padding: 10px;">
+                       <h6 class="main-content-label tx-dark tx-medium mb-0 font" onclick="toggleDescription('description2')" style="cursor: pointer;border-radius: 10px;background-color:white; border: 2px solid  #4b0082; padding: 10px;margin: 10px 0;">
   Attachments
   <span id="description2-toggleIcon" class="toggle-icon plus"></span>
 </h6>
 </div>
-<div class="toggle-description" id="description2" style="display: none; margin: 10px 0; padding: 10px;">
+<div class="toggle-description" id="description2" style="display: none;border-radius: 10px;background-color:white; border: 2px solid #4b0082; padding: 10px;margin: 10px 0;margin-bottom:0px;margin-left: 25px !important;margin-right:25px !important ;">
   <div class="card-body">
     <ul class="unorderd" >
       <?php echo $details->documents ?>
@@ -690,11 +679,11 @@ $modifiedString = str_replace("https://youtu.be/","https://www.youtube.com/embed
             <div class="col-lg-12 col-xl-12 col-md-12 col-12 col-sm-12">
                 <div class="" style="margin-bottom:0px;margin-left: -25px !important">
                     <div class="card-header border-bottom-0 ">
-                        <h6 class="main-content-label tx-dark tx-medium mb-0 font" onclick="toggleDescription('description1')" style="cursor: pointer;background-color:white;border-radius: 25px; border: 5px solid #ff8c00; padding: 10px;"> How To Apply
+                        <h6 class="main-content-label tx-dark tx-medium mb-0 font" onclick="toggleDescription('description1')" style="cursor: pointer;border-radius: 10px;background-color:white; border: 2px solid #4b0082; padding: 10px;margin: 10px 0;"> How To Apply
                         <span id="description1-toggleIcon" class="toggle-icon plus"></span>
                         </h6>
                     </div>
-                    <div class="toggle-description" id="description1" style="display: none; margin: 10px 0; padding: 10px;">
+                    <div class="toggle-description" id="description1" style="display: none;border-radius: 10px;background-color:white; border: 2px solid #4b0082; padding: 10px;margin: 10px 0;margin-bottom:0px;margin-left: 25px !important;margin-right:25px !important ;">
                     <div class="card-body"> 
                     <?php if($details->how_apply != ''){?>
                     <!--<li><?php echo $details->how_apply;?></li>-->
@@ -961,7 +950,7 @@ $(function() {
 });
 
 </script>
-  <script>
+  <!-- <script>
   function toggleDescription(id) {
     var description = document.getElementById(id);
     var toggleIcon = document.getElementById(id + "-toggleIcon");
@@ -976,4 +965,30 @@ $(function() {
       toggleIcon.classList.add("minus");
     }
   }
+</script> -->
+<script>
+function toggleDescription(id) {
+  var description = document.getElementById(id);
+  var toggleIcon = document.getElementById(id + "-toggleIcon");
+  var toggleDescriptions = document.getElementsByClassName("toggle-description");
+  var toggleIcons = document.getElementsByClassName("toggle-icon");
+
+  for (var i = 0; i < toggleDescriptions.length; i++) {
+    if (toggleDescriptions[i].id !== id) {
+      toggleDescriptions[i].style.display = "none";
+      toggleIcons[i].classList.remove("minus");
+      toggleIcons[i].classList.add("plus");
+    }
+  }
+
+  if (description.style.display === "block") {
+    description.style.display = "none";
+    toggleIcon.classList.remove("minus");
+    toggleIcon.classList.add("plus");
+  } else {
+    description.style.display = "block";
+    toggleIcon.classList.remove("plus");
+    toggleIcon.classList.add("minus");
+  }
+}
 </script>
