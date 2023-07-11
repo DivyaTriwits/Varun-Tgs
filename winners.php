@@ -198,12 +198,18 @@ element.style {
   display: flex;
   flex-direction: column;
   padding: 5px;
-  margin: 20px 0;
+  margin: 20px auto; /* Center the box horizontally in all views */
   border-radius: 10px;
-  border: 2px solid  #4b0082;
+  border: 2px solid #4b0082;
   box-shadow: 0 0 0px #000;
   transition: transform 0.3s ease;
   overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .box {
+    margin: 20px 0; /* Align the box to the left in other views */
+  }
 }
 
   .box:hover {
@@ -214,6 +220,9 @@ element.style {
 .rating {
   color: gold; /* Change color to the desired star color */
   font-size: 30px; /* Adjust the size of the stars */
+}
+button:hover {
+  color: black;
 }
 
 .star {
@@ -246,6 +255,7 @@ element.style {
   margin-top: 20px;
   padding: 10px 0;
 }
+
  
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8408941960924322"
@@ -286,12 +296,12 @@ crossorigin="anonymous"></script>
          <div class="box" style="border-color: #41044D;border-width:2px">
         <div class="profile">
           <div class="bio" style="margin: 10px; margin-bottom: 0px;">
-            <h5>BHASKAR SIDDHESH SANJAY</h5>
+            <h5>Bhaskar Siddhesh Sanjay</h5>
             <h5>INR 2,500/month</h5>
           </div>
         </div>
         <div class="qoute">
-          <h6 style=" margin: 10px;">Sitaram Jindal Scholarship winner</h6>
+          <h6 style=" margin: 10px;">Sitaram Jindal Scholarship Winner</h6>
           <p style="font-size:15px; margin: 10px;">
             I would like to express my sincere gratitude to The Global Scholarship.org for their invaluable Assistance in helping me secure a scholarship. <br>
 
@@ -308,12 +318,12 @@ Thanks to their efforts, I am now able to pursue my academic aspiration & unlock
          <div class="box" style="border-color: #41044D;border-width:2px">
         <div class="profile">
           <div class="bio" style="margin: 10px; margin-bottom: 0px;">
-            <h5>KHANPARA GRECY</h5>
+            <h5>Khanpara Grecy</h5>
             <h5>INR 2 Lakhs</h5>
           </div>
         </div>
         <div class="qoute">
-          <h6 style=" margin: 10px;">Reliance foundation scholarship winner</h6>
+          <h6 style=" margin: 10px;">Reliance Foundation Scholarship Winner</h6>
           <p style="font-size:15px; margin: 10px;">
             
 Hey I'm KHANPARA GRECY and I want to thank you because! I got reliance foundation scholarship and it's only because you The global scholarship
@@ -329,12 +339,12 @@ Thanks you are the reason for my happiness!!!
          <div class="box" style="border-color: #41044D;border-width:2px">
         <div class="profile">
           <div class="bio" style="margin: 10px; margin-bottom: 0px;">
-            <h5>HAZARATBILAL KHALIFA</h5>
+            <h5>Hazaratbilal Khalifa</h5>
             <h5>INR 25,000</h5>
           </div>
         </div>
         <div class="qoute">
-          <h6 style=" margin: 10px;">Danish scholarship winner</h6>
+          <h6 style=" margin: 10px;">Danish Scholarship Winner</h6>
           <p style="font-size:15px; margin: 10px;">
             I applied Danish trust scholarship through THE GLOBAL SCHOLARSHIP and then received it.
 First I thought that this is fake and global scholarship site is also fake.. But when I received call from Danish trust I really believed it. <br>
@@ -351,7 +361,7 @@ Thanks to the entire GLOBAL SCHOLARSHIP team.
          <div class="box" style="border-color: #41044D;border-width:2px">
         <div class="profile">
           <div class="bio" style="margin: 10px; margin-bottom: 0px;">
-            <h5>AALIYA BALABATTI</h5>
+            <h5>Aaliya Balabatti</h5>
             
           </div>
         </div>
@@ -377,7 +387,7 @@ But they also have provide some great information related to individual interest
           </div>
         </div>
         <div class="qoute">
-          <h6 style=" margin: 10px;">Reliance foundation scholarship winner</h6>
+          <h6 style=" margin: 10px;">Reliance Foundation Scholarship Winner</h6>
           <p style="font-size:15px; margin: 10px;">
             Dear Global Scholarship, <br>
 
@@ -395,12 +405,12 @@ Thank you for making a significant difference in my life.
          <div class="box" style="border-color: #41044D;border-width:2px">
         <div class="profile">
           <div class="bio" style="margin: 10px; margin-bottom: 0px;">
-            <h5>SAIKIRAN BAVGE</h5>
+            <h5>Saikiran Bavge</h5>
             <h5>INR 2 Lakhs</h5>
           </div>
         </div>
         <div class="qoute">
-          <h6 style=" margin: 10px;">Reliance Foundation scholarship</h6>
+          <h6 style=" margin: 10px;">Reliance Foundation Scholarship</h6>
           <p style="font-size:15px; margin: 10px;">
             Thank you very much for the Application Process Videos that you have shared on YouTube and because of it, I have been able to apply Independently and got selected for “Reliance Undergraduate Scholarship Program” <br>
 TheGlobalScholarship.org is a very good platform which creates awareness regarding education and scholarships for all categories of students. <br>
@@ -416,7 +426,7 @@ Thank you to whole team
          <div class="box" style="border-color: #41044D;border-width:2px">
         <div class="profile">
           <div class="bio" style="margin: 10px; margin-bottom: 0px;">
-            <h5>PramodPrajapat</h5>
+            <h5>Pramod Prajapat</h5>
             <h5></h5>
           </div>
         </div>
@@ -432,12 +442,12 @@ Thank you to whole team
          <div class="box" style="border-color: #41044D;border-width:2px">
         <div class="profile">
           <div class="bio" style="margin: 10px; margin-bottom: 0px;">
-            <h5>HARSH VARDHAN</h5>
+            <h5>Harsh Vardhan</h5>
             <h5>INR 30,000/month</h5>
           </div>
         </div>
         <div class="qoute">
-          <h6 style=" margin: 10px;">Fellowship winner</h6>
+          <h6 style=" margin: 10px;">Fellowship Winner</h6>
           <p style="font-size:15px; margin: 10px;">
             I have applied for this Fellowship and thanks for the global scholarship for sharing all kinds of fellowship to us.
           </p>
@@ -464,7 +474,7 @@ Thank you to whole team
          <div class="box" style="border-color: #41044D;border-width:2px">
         <div class="profile">
           <div class="bio" style="margin: 10px; margin-bottom: 0px;">
-            <h5>JAY THAKUR</h5>
+            <h5>Jay Thakur</h5>
             <h5>INR 2 Lakhs</h5>
           </div>
         </div>
@@ -480,12 +490,12 @@ Thank you to whole team
          <div class="box" style="border-color: #41044D;border-width:2px">
         <div class="profile">
           <div class="bio" style="margin: 10px; margin-bottom: 0px;">
-            <h5>SHRIYAKADAM</h5>
+            <h5>Shriyakadam</h5>
             <h5>INR 2 Lakhs</h5>
           </div>
         </div>
         <div class="qoute">
-          <h6 style=" margin: 10px;">Reliance foundation scholarship winner</h6>
+          <h6 style=" margin: 10px;">Reliance Foundation Scholarship Winner</h6>
           <p style="font-size:15px; margin: 10px;">
             Great way of giving students opportunities to learn more! <br>
 Not even financial issues can stop them due to you guys!
@@ -498,12 +508,12 @@ Not even financial issues can stop them due to you guys!
          <div class="box" style="border-color: #41044D;border-width:2px">
         <div class="profile">
           <div class="bio" style="margin: 10px; margin-bottom: 0px;">
-            <h5>SUMIT YADAV</h5>
+            <h5>Sumit Yadav</h5>
             <h5>INR 2 Lakhs</h5>
           </div>
         </div>
         <div class="qoute">
-          <h6 style=" margin: 10px;">Reliance Foundation scholarship winner</h6>
+          <h6 style=" margin: 10px;">Reliance Foundation Scholarship Winner</h6>
           <p style="font-size:15px; margin: 10px;">
            I am selected for Reliance Foundation Scholarship Thank you so much for giving information for scholarship.
           </p>
