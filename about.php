@@ -69,6 +69,7 @@
       .section .content,
       .section .content2 {
          padding: 0;
+
       }
       .section .content2{
          display: block!important;
@@ -109,7 +110,7 @@
 <div class="section">
    <div class="image">
       <img src="<?php echo base_url()?>assets/img/brand/2.webp" alt="Image 1" class="background-image" style="width: 500px;">
-   </div>
+   </div><br>
    <div class="content">
       <h3>The Global Scholarship</h3>
       <p>
@@ -137,7 +138,7 @@ We are on a mission to build the world’s largest student community, & help the
    </div>
    <div class="image">
       <img src="<?php echo base_url()?>assets/img/brand/3.webp" alt="Image 4">
-   </div>
+   </div><br>
    
 </div>
 
@@ -153,7 +154,7 @@ We are on a mission to build the world’s largest student community, & help the
    </div>
    <div class="image">
       <img src="<?php echo base_url()?>assets/img/brand/1.webp" alt="Image 2" style="width: 500px;">
-   </div>
+   </div><br>
    
    <div class="content">
       <div class="content3" >
@@ -177,7 +178,7 @@ We are on a mission to build the world’s largest student community, & help the
    </div>
    <div class="image">
       <img src="<?php echo base_url()?>assets/img/brand/5.webp" alt="Image 4">
-   </div>
+   </div><br>
    
 </div>
 
@@ -188,30 +189,30 @@ We are on a mission to build the world’s largest student community, & help the
    <div class="content">
       <h3>Our Process</h3>
       <p><b>Our solution works as follows:</b> <br>
-1. A team of experts curates the available scholarships by cross-checking facts and reaching out to the concerned authorities. <br>
-2. The team segregates all the details required for students to fill out the application form. <br>
-3. The scholarships are then posted on our Automated scholarship portal, which automatically filters them to match student profiles. <br>
-4. Students are notified via message, email, and application notifications when there are scholarships that match their profiles. <br>
-5. We don't just stop there. We also help students through the application process by providing detailed application process videos & instant query resolution through our social media handles. <br>
-6. We notify students when the results are out. And a lot more…
+• A team of experts curates the available scholarships by cross-checking facts and reaching out to the concerned authorities. <br>
+• The team segregates all the details required for students to fill out the application form. <br>
+• The scholarships are then posted on our Automated scholarship portal, which automatically filters them to match student profiles. <br>
+• Students are notified via message, email, and application notifications when there are scholarships that match their profiles. <br>
+• We don't just stop there. We also help students through the application process by providing detailed application process videos & instant query resolution through our social media handles. <br>
+• We notify students when the results are out. And a lot more…
 
  <br>
 </p>
    </div>
 </div>
    <div class="image">
-      <img src="<?php echo base_url()?>assets/img/brand/7.webp" alt="Image 4" style="height: 400px;">
+      <img src="<?php echo base_url()?>assets/img/brand/7.webp" alt="Image 4" style="height: 400px;"><br>
    </div>
    <div class="content">
       <div class="content3" >
       <h3>Our Process</h3>
       <p><b>Our solution works as follows:</b> <br>
-1. A team of experts curates the available scholarships by cross-checking facts and reaching out to the concerned authorities. <br>
-2. The team segregates all the details required for students to fill out the application form. <br>
-3. The scholarships are then posted on our Automated scholarship portal, which automatically filters them to match student profiles. <br>
-4. Students are notified via message, email, and application notifications when there are scholarships that match their profiles. <br>
-5. We don't just stop there. We also help students through the application process by providing detailed application process videos & instant query resolution through our social media handles. <br>
-6. We notify students when the results are out. And a lot more…
+• A team of experts curates the available scholarships by cross-checking facts and reaching out to the concerned authorities. <br>
+• The team segregates all the details required for students to fill out the application form. <br>
+• The scholarships are then posted on our Automated scholarship portal, which automatically filters them to match student profiles. <br>
+• Students are notified via message, email, and application notifications when there are scholarships that match their profiles. <br>
+• We don't just stop there. We also help students through the application process by providing detailed application process videos & instant query resolution through our social media handles. <br>
+• We notify students when the results are out. And a lot more…
 
  <br>
 </p>
@@ -228,25 +229,16 @@ We are on a mission to build the world’s largest student community, & help the
       <h3>Milestones</h3>
       <p><b>The Global Scholarships: A Growing and Dynamic Organization</b> <br>
 The Global Scholarships product was launched in 2020 with the mission of providing scholarships to talented students from around the world. The organization has grown rapidly in recent years, and it has now helped over 100,000 students to apply for relevant scholarships. <br>
-•  2019: The Global Scholarships organization conducts a survey of students to identify the most pressing challenges they face. <br>
-•  2020: The Global Scholarships organization launches a new website. <br>
-•  2021: The Global Scholarships organization partners with universities and organizations. <br>
-•  2022: The Global Scholarships organization initiates Social Media Campaigns. <br>
-•  2023: The Global Scholarships organization achieves its target of helping 100,000 students apply for relevant scholarships. <br>
+•  2021: The Global Scholarships organization launches a new website. <br>
+•  2022: The Global Scholarships organization initiates Social Media Campaigns. <br> 
+•  2023: The Global Scholarships organization achieves its target of helping 100,000 students apply for relevant scholarships.
 
-<b>Future Plans:</b> 
-
-•  2024: The Global Scholarships organization Plans to partner with CSR and HNI to generate more scholarships. <br>
-•  2025: The Global Scholarships organization aims to achieve the target of  helping 1 million students. <br>
-•  2026: The Global Scholarships organization aims to scale in other countries. <br>
-
-The Global Scholarships organization is a growing and dynamic organization that is committed to providing scholarships to talented students from around the world. The organization is making a significant impact on the lives of students and their communities, and it is helping to build a more globalized and interconnected world.
 
 </p>
    </div>
    <div class="image">
       <img src="<?php echo base_url()?>assets/img/brand/4a.webp" alt="Image 4">
-   </div>
+   </div><br>
     
    
 </div>
@@ -260,41 +252,38 @@ The Global Scholarships organization is a growing and dynamic organization that 
          For any inquiries or assistance, please feel free to reach out to us:
          <br>
          <b>Email:</b>
-         <br><b> Business Email:</b>
+         <br><b>For Business:</b>
          <a href="mailto:business@triwits.com">business@triwits.com</a>
-         <br><b> Support Email:</b>
+         <br><b>For student:</b>
          <a href="mailto:support@theglobalscholarship.org">support@theglobalscholarship.org</a>
       </p>
       <div class="social-icons">
-         <a href="https://www.facebook.com/theglobalscholarship/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
-         <a href="https://www.youtube.com/c/theglobalscholarshiporg" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
          <a href="https://www.instagram.com/the_global_scholarship/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
-         <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+         <a href="https://www.youtube.com/c/theglobalscholarshiporg" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
          <a href="https://t.me/theglobalscholarship" target="_blank" rel="noopener noreferrer"><i class="fa fa-telegram"></i></a>
+         <a href="https://www.facebook.com/theglobalscholarship/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
       </div>
    </div>
 </div>
    <div class="image">
-      <img src="<?php echo base_url()?>assets/img/brand/7.webp" alt="Image 4" style="height: 400px;">
+      <img src="<?php echo base_url()?>assets/img/brand/7.webp" alt="Image 4" style="height: 400px;"><br>
    </div>
    <div class="content">
       <div class="content3" >
       <h3>Contact Us</h3>
       <p>
          For any inquiries or assistance, please feel free to reach out to us:
-         <br>
-         <b>Email:</b>
-         <br><b> Business Email:</b>
-         <a href="mailto:business@triwits.com">business@triwits.com</a>
-         <br><b> Support Email:</b>
+         <br><b>For Students:</b>
          <a href="mailto:support@theglobalscholarship.org">support@theglobalscholarship.org</a>
+         <br><b>For Business:</b>
+         <a href="mailto:business@triwits.com">business@triwits.com</a>
+         
       </p>
       <div class="social-icons">
-         <a href="https://www.facebook.com/theglobalscholarship/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
-         <a href="https://www.youtube.com/c/theglobalscholarshiporg" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
          <a href="https://www.instagram.com/the_global_scholarship/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
-         <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+         <a href="https://www.youtube.com/c/theglobalscholarshiporg" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
          <a href="https://t.me/theglobalscholarship" target="_blank" rel="noopener noreferrer"><i class="fa fa-telegram"></i></a>
+         <a href="https://www.facebook.com/theglobalscholarship/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
       </div>
    </div>
 </div>
