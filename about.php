@@ -77,6 +77,28 @@
          display: none!important;
       }
    }
+   .section .content .social-icons {
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+}
+
+.section .content .social-icons a {
+   font-size: 25px;
+   color: black;
+   margin-right: 30px; /* Adjust the margin value as needed */
+   transition: all 0.3s ease-in-out;
+}
+
+.section .content .social-icons a:hover {
+   color: purple; /* Change the color to purple */
+    /*box-shadow: 0 0 5px 2px purple; Change the box-shadow color to purple */
+   border-radius: 50%;
+   transform: translateX(5px) translateY(-5px); /* Add the movement effect */
+}
+
+
+
 </style>
 <div class="complete">
 
@@ -227,5 +249,55 @@ The Global Scholarships organization is a growing and dynamic organization that 
    </div>
     
    
+</div>
+<!-- Contact Us Section -->
+<div class="section">
+   <div class="content2" style="display: none;">
+   <div class="content">
+      
+      <h3>Contact Us</h3>
+      <p>
+         For any inquiries or assistance, please feel free to reach out to us:
+         <br>
+         <b>Email:</b>
+         <br><b> Business Email:</b>
+         <a href="mailto:business@triwits.com">business@triwits.com</a>
+         <br><b> Support Email:</b>
+         <a href="mailto:support@theglobalscholarship.org">support@theglobalscholarship.org</a>
+      </p>
+      <div class="social-icons">
+         <a href="https://www.facebook.com/theglobalscholarship/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+         <a href="https://www.youtube.com/c/theglobalscholarshiporg" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
+         <a href="https://www.instagram.com/the_global_scholarship/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+         <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+         <a href="https://t.me/theglobalscholarship" target="_blank" rel="noopener noreferrer"><i class="fa fa-telegram"></i></a>
+      </div>
+   </div>
+</div>
+   <div class="image">
+      <img src="<?php echo base_url()?>assets/img/brand/7.webp" alt="Image 4" style="height: 400px;">
+   </div>
+   <div class="content">
+      <div class="content3" >
+      <h3>Contact Us</h3>
+      <p>
+         For any inquiries or assistance, please feel free to reach out to us:
+         <br>
+         <b>Email:</b>
+         <br><b> Business Email:</b>
+         <a href="mailto:business@triwits.com">business@triwits.com</a>
+         <br><b> Support Email:</b>
+         <a href="mailto:support@theglobalscholarship.org">support@theglobalscholarship.org</a>
+      </p>
+      <div class="social-icons">
+         <a href="https://www.facebook.com/theglobalscholarship/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+         <a href="https://www.youtube.com/c/theglobalscholarshiporg" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
+         <a href="https://www.instagram.com/the_global_scholarship/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+         <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+         <a href="https://t.me/theglobalscholarship" target="_blank" rel="noopener noreferrer"><i class="fa fa-telegram"></i></a>
+      </div>
+   </div>
+</div>
+</div>
 </div>
 </div>
